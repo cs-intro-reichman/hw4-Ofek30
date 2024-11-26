@@ -17,14 +17,56 @@ public class MyString {
     }
 
     /** Returns the lowercase version of the given string. */
-    public static String lowerCase(String str) {
-        // Replace the following statement with your code
-        return null;
+    public static String lowerCase(String str) 
+    {
+        String strnew="";
+        char chr=' ';
+   
+        for(int i=0;i<str.length();i++)
+        {
+            if(str.charAt(i)>64&&str.charAt(i)<91)
+            {
+            chr =(char)str.charAt(i);
+            chr=(char) (chr+32);
+            strnew=strnew+(chr);
+            }
+            else
+            {
+                chr=str.charAt(i);
+                strnew=strnew+chr;
+            }
+        }
+        return strnew;
     }
 
     /** If str1 contains str2, returns true; otherwise returns false. */
-    public static boolean contains(String str1, String str2) {
-        // Replace the following statement with your code
-        return false;
+    public static boolean contains(String str1, String str2) 
+    {
+        boolean ans=false;
+        int c=0;
+        for(int i=0;i<str1.length();i++)
+        {
+            if(str1.charAt(i)==str2.charAt(0))
+            {
+                c=i;
+                for(int r=0;r<str2.length();r++)
+                {
+                    
+                    if(str1.charAt(c)==str2.charAt(r))
+                    ans=true;
+                    else
+                    {
+                        r=str2.length();
+                        ans=false;
+                    }
+                    c++;
+                }
+                if(ans)
+                {
+                    return ans;
+                }
+            }
+        }
+        return ans;
     }
 }
