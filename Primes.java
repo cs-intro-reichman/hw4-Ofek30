@@ -3,8 +3,8 @@ public class Primes
     public static void main(String[] args) 
     {
         int cnt=0;
-        int level=Integer.parseInt(args[0]);
-        boolean [] arr=new boolean[level+1];
+        int level=Integer.parseInt(args[0])+1;
+        boolean [] arr=new boolean[level];
         arr[0]=false; arr[1]=false;
         for(int i=2;i<level;i++)
         {
@@ -38,8 +38,9 @@ public class Primes
            
            
         }
+        level=level-1;
         
-        double d=(double)cnt/level;
+        double d=(double)cnt/(level);
         d=d*100;
         int pre=(int) d;
         System.out.println("There are "+ cnt+ "primes between 2 and "+level+" ("+pre+"% are primes)");
