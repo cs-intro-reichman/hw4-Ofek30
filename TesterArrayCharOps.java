@@ -63,7 +63,7 @@ public class TesterArrayCharOps {
 
         boolean test6 = ArrCharOps.lastIndexOf(arr1, 'r') == 20;
         boolean test7 = ArrCharOps.lastIndexOf(arr1, 'B') == -1;
-
+      
         int passed = (test1 ? 1 : 0) + (test2 ? 1 : 0) + (test3 ? 1 : 0) + (test4 ? 1 : 0) +
                      (test5 ? 1 : 0) + (test6 ? 1 : 0) + (test7 ? 1 : 0);
         String verdict = passed == num_tests ? "(Passed)": "Failed";
@@ -114,6 +114,7 @@ public class TesterArrayCharOps {
 
         int res = ArrCharOps.compareTo("abc", "");
         boolean test4 = res != 0 && res != -1 && res != 1;
+        System.out.println(test3);
 
         int passed = (test1 ? 1 : 0) + (test2 ? 1 : 0) + (test3 ? 1 : 0) + (test4 ? 1 : 0);
         String verdict = passed == num_tests ? "(Passed)": "Failed";
@@ -132,6 +133,7 @@ public class TesterArrayCharOps {
         boolean test1 = ArrCharOps.hashCode(arr1) == (long) 97;
         boolean test2 = ArrCharOps.hashCode(arr2) == (long) 300179;
         boolean test3 = ArrCharOps.hashCode(arr3) == (long) 0;
+        System.out.println(ArrCharOps.hashCode(arr2));
 
         int passed = (test1 ? 1 : 0) + (test2 ? 1 : 0) + (test3 ? 1 : 0);
         String verdict = passed == num_tests ? "(Passed)": "Failed";
