@@ -42,9 +42,7 @@ public class Primes
         double pre = (cnt / (double)level) * 100;
         int d=(int)pre;
 
-        String output = "There are " + cnt + " primes between 2 and " + level + " (" + (int)Math.round(pre) + "% are primes)";
-output = output.replace("%", "%25"); // עיבוד הפלט
-System.out.println(output);
+        System.out.println("There are " + cnt + " primes between 2 and " + level + " (" + d + "% are primes)");
 
        
     }
