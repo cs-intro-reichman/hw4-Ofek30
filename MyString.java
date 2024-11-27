@@ -55,36 +55,6 @@ public class MyString
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) 
     {
-     if(CheckError(str1)==false)  
-     return false;
-     if(CheckError(str2)==false)
-     return true;  
-
-        boolean ans=false;
-        int c=0;
-        for(int i=0;i<str1.length();i++)
-        {
-            if(str1.charAt(i)==str2.charAt(0))
-            {
-                c=i;
-                for(int r=0;r<str2.length();r++)
-                {
-                    
-                    if(str1.charAt(c)==str2.charAt(r))
-                    ans=true;
-                    else
-                    {
-                        r=str2.length();
-                        ans=false;
-                    }
-                    c++;
-                }
-                if(ans)
-                {
-                    return ans;
-                }
-            }
-        }
-        return ans;
+        return str1.contains(str2);
     }
 }
