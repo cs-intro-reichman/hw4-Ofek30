@@ -40,9 +40,9 @@ public class Primes
         }
         level=level-1;
         double pre = (cnt / (double)level) * 100;
-        pre=(int)pre;
+        int d=(int)pre;
 
-        System.out.println("There are " + cnt + " primes between 2 and " + level + " (" + pre + "% are primes)");
+        System.out.println("There are " + cnt + " primes between 2 and " + level + " (" + d + "% are primes)");
 
        
     }
