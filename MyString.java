@@ -1,4 +1,17 @@
-public class MyString {
+public class MyString 
+{ 
+    public static boolean CheckError(String str) // return true if theres only small letters in the word anf false if not
+    {
+        for(int i=0;i<str.length();i++)
+        {
+            if(str.charAt(i)<123&&str.charAt(i)>96)
+            return true;
+            if(str.charAt(i)>64&&str.charAt(i)<91)
+            return true;
+        }
+        return false;
+
+    }
     public static void main(String[] args) {
         System.out.println("Testing lowercase:");
         System.out.println("UnHappy : " + lowerCase("UnHappy"));
@@ -42,6 +55,11 @@ public class MyString {
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) 
     {
+     if(CheckError(str1)==false)  
+     return false;
+     if(CheckError(str2)==false)
+     return true;  
+
         boolean ans=false;
         int c=0;
         for(int i=0;i<str1.length();i++)
