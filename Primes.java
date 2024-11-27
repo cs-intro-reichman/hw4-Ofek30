@@ -41,7 +41,7 @@ public class Primes
         level=level-1;
         double pre = (cnt / (double)level) * 100;
 
-        System.out.println(String.format("There are %d primes between 2 and %d (%.2f%% are primes)", cnt, level, pre));
+        System.out.println("There are " + cnt + " primes between 2 and " + level + " (" + (int)Math.round(pre) + "% are primes)");
        
     }
 }
