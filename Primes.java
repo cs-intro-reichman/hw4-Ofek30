@@ -6,7 +6,7 @@ public class Primes
         int cnt=0;
         int level=Integer.parseInt(args[0])+1;
         boolean [] arr=new boolean[level];
-        System.out.println("Prime numbers up to "+level+":");
+        System.out.println("Prime numbers up to "+(level-1)+":");
         arr[0]=false; arr[1]=false;
         for(int i=2;i<level;i++)
         {
